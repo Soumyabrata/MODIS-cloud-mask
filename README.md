@@ -1,27 +1,25 @@
-# Study of Clear Sky Models for Singapore
+# Correlating Satellite Cloud Cover with Sky Cameras
 
-With the spirit of reproducible research, this repository contains all the codes required to produce the results in the manuscript: S. Dev, S. Manandhar, Y. H. Lee and S. Winkler, Study of Clear Sky Models for Singapore, *Proc. Progress In Electromagnetics Research Symposium (PIERS)*, 2017. 
+With the spirit of reproducible research, this repository contains all the codes required to produce the results in the manuscript: S. Manandhar, S. Dev, Y. H. Lee and Y. S. Meng, Correlating Satellite Cloud Cover with Sky Cameras, *Proc. Progress In Electromagnetics Research Symposium (PIERS)*, 2017. 
 
 Please cite the above paper if you intend to use whole/part of the code. This code is only for academic and research purposes.
 
-![alt text](https://github.com/Soumyabrata/clear-sky-models/blob/master/Figs/sample-solar-day.png "sample solar irradiance")
+![alt text](https://github.com/Soumyabrata/MODIS-cloud-mask/blob/master/figs/cloudmask-result.png "cloud mask analysis")
 
 ## Code Organization
 The codes are written in python.
 
 ### Dataset
-The required dataset are present in this repository. The weather station data are present in the folder `weather_data`, and the SODA files are present in the folder `soda_files`. 
+The required dataset are present in this repository. The cloud mask data from MODIS satellite image are present in the folder `cloud_mask`, the combined cloud mask and cloud coverage data are present in the folder `cmask_coverage_result`, and the daywise cloud coverage data from sky cameras are present in the folder `coverage_data`. 
 
 ### Core functionality
-* `Bird_model.py` Estimates the solar radition values based on Bird's clear sky model.
-* `import_WS.py` Imports the weather station data (format based on Davis weather station). 
+
 * `nearest.py` Finds the nearest observation, based on a given time stamp. It also provides the timestamp difference between the queried- and found- timestamp. 
-* `process_SODA.py` Processes the SODA McClear files.
-* `RMSE.py` Calculates the RMSE between two numpy arrays. 
-* `Yang_model.py` Estimates the solar radition values based on Yang's clear sky model.
+* `normalize_array.py` Normalizes a numpy array into the range [0,1]. 
+* `readCoverage.py` Helper function to read and analyze all individual coverage files. 
 
 ### Reproducibility 
-In addition to all the related codes, we have also shared sample generated clear-sky model for a single day. This can be found in the folder `./Figs`.
+In addition to all the related codes, we have shared the analysis figure in the folder `./figs`.
 
-Please run the notebook `main.ipynb` to generate the various results mentioned in the paper.
+Please run the notebook `main.ipynb` to generate the result mentioned in the paper.
 
