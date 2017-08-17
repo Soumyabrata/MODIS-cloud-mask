@@ -7,7 +7,7 @@ Please cite the above paper if you intend to use whole/part of the code. This co
 ![alt text](https://github.com/Soumyabrata/MODIS-cloud-mask/blob/master/figs/cloudmask-result.png "cloud mask analysis")
 
 ## Code Organization
-The codes are written in python.
+The codes are written in python. Thanks to <a href="https://www.linkedin.com/in/joseph-lemaitre-93a74412b/">Joseph Lemaitre</a> for providing the scripts to process MODIS multi bands images. 
 
 ### Dataset
 The required dataset are present in this repository. The cloud mask data from MODIS satellite image are present in the folder `cloud_mask`, the combined cloud mask and cloud coverage data are present in the folder `cmask_coverage_result`, and the daywise cloud coverage data from sky cameras are present in the folder `coverage_data`. 
