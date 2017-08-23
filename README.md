@@ -9,8 +9,14 @@ Please cite the above paper if you intend to use whole/part of the code. This co
 ## Code Organization
 The codes are written in python. Thanks to <a href="https://www.linkedin.com/in/joseph-lemaitre-93a74412b/">Joseph Lemaitre</a> for providing the scripts to process MODIS multi bands images. 
 
-### Dataset
-The required dataset are present in this repository. The cloud mask data from MODIS satellite image are present in the folder `cloud_mask`, the combined cloud mask and cloud coverage data are present in the folder `cmask_coverage_result`, and the daywise cloud coverage data from sky cameras are present in the folder `coverage_data`. 
+The required dataset are present in this repository. The cloud mask data from MODIS satellite image are present in the folder `cloud_mask`, the combined cloud mask and cloud coverage data are present in the folder `cmask_coverage_result`, scripts to download MODIS data and various products can be found in the folder `data_preparation`, and the daywise cloud coverage data from sky cameras are present in the folder `coverage_data`. 
+
+
+### Dataset preparation
+* `modisGrabber.py` Downloads the MODIS MOD- and MYD- level 5 products.
+* `cloudmask.py` Computes the cloud mass product from the downloaded MODIS data files. It uses the function `PrecipitableWaterProduct.py` while extracting the cloud mask values.
+
+The calculated MODIS cloud mask data are present in a $3\times3$ matrix.
 
 ### Core functionality
 
