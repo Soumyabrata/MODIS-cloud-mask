@@ -16,13 +16,14 @@ The required dataset are present in this repository. The cloud mask data from MO
 * `modisGrabber.py` Downloads the MODIS MOD- and MYD- level 5 products.
 * `cloudmask.py` Computes the cloud mass product from the downloaded MODIS data files. It uses the function `PrecipitableWaterProduct.py` while extracting the cloud mask values.
 
-The calculated MODIS cloud mask data are present in a $3\times3$ matrix.
+The calculated MODIS cloud mask data are present in a 3X3 matrix. It is stored in `.mat` format, along with the corresponding date and time. In our experiments, we use the average value of the various cloud mask values in the 3X3 matrix.
 
 ### Core functionality
 
 * `nearest.py` Finds the nearest observation, based on a given time stamp. It also provides the timestamp difference between the queried- and found- timestamp. 
 * `normalize_array.py` Normalizes a numpy array into the range [0,1]. 
 * `readCoverage.py` Helper function to read and analyze all individual coverage files. 
+* `display_cloudmask_on_map.py` Displays the cloud mask over a map region.
 
 ### Reproducibility 
 In addition to all the related codes, we have shared the analysis figure in the folder `./figs`.
