@@ -4,7 +4,7 @@ With the spirit of reproducible research, this repository contains all the codes
 
 Please cite the above paper if you intend to use whole/part of the code. This code is only for academic and research purposes.
 
-![alt text](https://github.com/Soumyabrata/MODIS-cloud-mask/blob/master/figs/cloudmask-result.png "cloud mask analysis")
+![alt text](https://github.com/Soumyabrata/MODIS-cloud-mask/blob/master/figs/compare-figure.jpg "cloud mask analysis")
 
 ## Code Organization
 The codes are written in python. Thanks to <a href="https://www.linkedin.com/in/joseph-lemaitre-93a74412b/">Joseph Lemaitre</a> for providing the scripts to process MODIS multi bands images. 
